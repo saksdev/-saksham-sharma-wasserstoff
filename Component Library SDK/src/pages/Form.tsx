@@ -30,7 +30,7 @@ export default function FormPage({ formData, handleChange, handleSubmit }: Props
       <p>Secure your spot at next year's biggest coding conference</p>
       <form id='form' onSubmit={handleSubmit}>
         <div className='form-container'>
-          <FileUpload />
+          <FileUpload label="Upload your file" />
           <Input label='Full Name' placeholder='Enter Your Full Name' name="name" value={formData.name} onChange={handleChange} />
           <Input label='Email Address' placeholder='Enter Your Email' name="email" value={formData.email} onChange={handleChange}/>
           <Input label='Github Username' placeholder='Enter Your Github Username' name="username" value={formData.username} onChange={handleChange} />
