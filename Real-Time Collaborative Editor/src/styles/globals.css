@@ -1,0 +1,102 @@
+/* Add these styles to your global CSS file */
+
+/* Remote cursor styles */
+.monaco-cursor {
+  position: relative;
+}
+
+.monaco-cursor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background-color: var(--cursor-color, #ff0000);
+  animation: blink 1s steps(2, start) infinite;
+}
+
+.monaco-cursor::after {
+  content: attr(data-name);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background-color: var(--cursor-color, #ff0000);
+  color: white;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Custom scrollbar for editor */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom component styles */
+@layer components {
+  .editor-container {
+    @apply border rounded-lg overflow-hidden shadow-lg;
+  }
+  
+  .user-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium text-white;
+  }
+  
+  .login-form {
+    @apply max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg;
+  }
+}
+
+/* Editor loading animation */
+.editor-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.editor-loading-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid #ffffff;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

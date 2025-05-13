@@ -1,0 +1,45 @@
+.file-upload-container {
+  height: 150px;
+  border: 2px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.file-upload-container img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.file-upload-container p {
+  text-align: center;
+  font-size: 12px;
+}
+
+input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+label {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+input {
+	color: #fff;
+	padding: 12px;
+	margin-bottom: 20px;
+	border-radius: 8px;
+	background: rgba(255, 255, 255, 0.2);
+	border: 1px solid white;
+}

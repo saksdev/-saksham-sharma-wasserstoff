@@ -1,0 +1,135 @@
+.cardWrap {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: -webkit-fill-available;
+	max-width: 310px;
+	height: 140px;
+	border-radius: 10px;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(0px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cardLeft {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 90%;
+	padding: 10px;
+	position: relative;
+	border: none;
+	border-right: 1px dashed #ffffff50;
+
+}
+
+.cardLeft::before,
+.cardLeft::after {
+	content: '';
+	position: absolute;
+	right: -10px;
+	width: 20px;
+	height: 20px;
+	background: linear-gradient(269deg, #090818, #131134);
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.cardLeft::before {
+	top: -10px;
+}
+
+.cardLeft::after {
+	bottom: -10px;
+}
+
+.cardLeft span {
+	font-size: 10px;
+	opacity: 0.7;
+	color: #fff;
+}
+
+.cardLeft-one {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.cardLeft-one img {
+	width: 30px;
+}
+
+.cardLeft-one span {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.cardLeft-two {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-top: 25px;
+}
+
+.cardLeft-two img {
+	width: 40px;
+}
+
+#profile p {
+	margin: 0;
+	color: #fff;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+#profile span {
+	font-size: 12px;
+	color: #ccc;
+}
+
+.cardRight {
+	display: flex;
+	flex-direction: column;
+	width: 10%;
+	padding: 15px;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	border: none;
+}
+
+.cardRight::before,
+.cardRight::after {
+	content: '';
+	position: absolute;
+	right: -13px;
+	width: 25px;
+	height: 25px;
+	background: #000;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.cardRight::before {
+	top: -10px;
+}
+
+.cardRight::after {
+	bottom: -10px;
+}
+
+.cardRight p {
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	transform: rotate(90deg);
+	white-space: nowrap;
+}
+
+.textcolor {
+	color: rgb(213, 61, 23);
+}
