@@ -15,6 +15,3 @@ To run this project locally, ensure you have the following installed:
 - [Node.js](https://nodejs.org/) (v16 or higher recommended)
 - [npm](https://www.npmjs.com/) (or [yarn](https://yarnpkg.com/) as an alternative)
 - A modern web browser (e.g., Chrome, Firefox)
-
-## Setup Instructions
-Follow these steps to set up and run the project locally:
