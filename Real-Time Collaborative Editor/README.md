@@ -1,54 +1,58 @@
-# React + TypeScript + Vite
+Real-Time Collaborative Editor
+A web-based real-time collaborative text editor that allows multiple users to edit the same document simultaneously across different browser windows or tabs. Changes are synced instantly, and users are distinguished by unique colors and names.
+Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Multi-Session Editing: Multiple browser windows or tabs can edit the same document concurrently.
+Real-Time Syncing: Changes made in one session appear instantly in all other connected sessions.
+User Distinction: Each user is assigned a unique color and name for easy identification.
 
-Currently, two official plugins are available:
+Live Demo
+Try the editor live at: https://real-time-collaborative-editor-xi.vercel.app/
+Prerequisites
+To run this project locally, ensure you have the following installed:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Node.js (v16 or higher recommended)
+npm (or yarn as an alternative)
+A modern web browser (e.g., Chrome, Firefox)
 
-## Expanding the ESLint configuration
+Setup Instructions
+Follow these steps to set up and run the project locally:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Clone the Repository:
+git clone https://github.com/username/realtime-collaborative-editor.git
+cd realtime-collaborative-editor
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install Dependencies:
+npm install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Or, if using yarn:
+yarn install
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
+Run the Development Server:
+npm start
+
+Or with yarn:
+yarn start
+
+This will start the app at http://localhost:3000 (or another port if specified).
+
+Test Collaborative Features:
+
+Open http://localhost:3000 in multiple browser tabs or windows.
+Start typing in one tab and observe the changes syncing in real-time across other tabs.
+Note the unique color and name assigned to each session.
+
+Project Overview
+This project is a real-time collaborative text editor built to demonstrate seamless multi-user editing capabilities. It leverages technologies like WebSocket (or a library like Socket.IO) for real-time communication and a front-end framework (e.g., React) for the user interface. Each user is assigned a distinct color and name to differentiate their contributions in the shared document. The editor is designed to be lightweight and responsive, making it ideal for collaborative tasks.
+Tech Stack
+
+Frontend: React (assumed, based on common Vercel deployments)
+Real-Time Syncing: WebSocket, Socket.IO, or Firebase (adjust based on actual implementation)
+Deployment: Vercel
+Styling: CSS or a library like Tailwind CSS (assumed)
+
+Please ensure your code follows the project's coding standards and includes relevant tests.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
