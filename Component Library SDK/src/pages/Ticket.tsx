@@ -2,7 +2,16 @@ import './Ticket.css';
 import Logo from '../assets/ticket.png';
 import Profile from '../assets/profile.png';
 
-export default function Ticket({ data: { name, email, username } }) {
+// Define the props type
+interface TicketProps {
+  data: {
+    name: string;
+    email: string;
+    username: string;
+  };
+}
+
+export default function Ticket({ data: { name, email, username } }: TicketProps) {
   return (
     <>
       <h1>
