@@ -5,14 +5,12 @@ import Ticket from './pages/Ticket';
 import './App.css';
 
 function App() {
-  
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     username: ''
   });
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
