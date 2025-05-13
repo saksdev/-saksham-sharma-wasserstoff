@@ -8,7 +8,7 @@ A web-based real-time collaborative text editor that allows multiple users to ed
 - **User Distinction**: Each user is assigned a unique color and name for easy identification.
 
 ## Live Demo
-Try the editor live at: [https://real-time-collaborative-editor-xi.vercel.app/](https://real-time-collaborative-editor-xi.vercel.app/)
+Try the editor live at: [https://real-time-collaborative-editor-xi.vercel.app/](saksham-sharma-wasserstoff.vercel.app/)
 
 ## Prerequisites
 To run this project locally, ensure you have the following installed:
